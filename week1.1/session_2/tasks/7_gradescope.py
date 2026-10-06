@@ -5,8 +5,8 @@
 # Ask a user to enter two numbers (one per input)
 try: 
 
-   num1 = int(input("please enter the first number:  "))
-   num2 = int(input("please enter the second number:  "))
+   num1 = int(input("Please enter the first number:  "))
+   num2 = int(input("Please enter the second number:  "))
 
 # multiply those numbers together
    answer = num1*num2
