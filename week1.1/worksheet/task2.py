@@ -31,4 +31,4 @@ try:
 
 except:
    
-   print("please enter numbers only!")
+   print("please enter whole number only!")
