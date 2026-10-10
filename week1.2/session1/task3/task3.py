@@ -20,3 +20,4 @@ print(fruit.count("strawberry"))
 print(a)
 print(b)
 print(c)
+

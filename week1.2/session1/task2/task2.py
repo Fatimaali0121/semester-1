@@ -19,6 +19,6 @@ text = "a string"
 print(text[4])
 
 #slide 21
-t= (1,2,3)
+t = (1,2,3)
 (a, b, c) = t
 print(b)

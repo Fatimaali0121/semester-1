@@ -7,19 +7,26 @@ vegetables = {"leek", "tomato", "potato"}
 
 both = fruit.intersection(vegetables)
 print(both)
+#or
+print(fruit.intersection(vegetables))
 
 # Why does the following code diplay five items?
 
 food = fruit.union(vegetables)
 print(food)
+#or
+print(fruit.union(vegetables))
 
 # Add an item to fruit
 fruit.add("rasberry")
 print(fruit)
 
+
 # Remove an item from vegetables
 vegetables.discard("leek")
 print(vegetables)
 
+
 # Find and display symmetric difference of the two sets
 print(fruit.symmetric_difference(vegetables))
+
