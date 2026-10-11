@@ -5,7 +5,7 @@
 
 correct_username = "user123"
 correct_password = "password456"
-two_factor_enabled = False
+two_factor_enabled = True
 correct_2fa_code = "7890"
 
 # Ask user for their username and password
