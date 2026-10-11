@@ -1,20 +1,30 @@
+# Worksheet 1.2: Task 1 Solution
 import sys
 
-grade_text = input().strip()
+user_input = (input("Enter your final grade out of 100: "))
 
-if not grade_text or not grade_text.isdecimal():
+if not user_input.isdecimal():                                   #to use is.decimal the variable must be string
     sys.exit("Error: Grade must be an integer between 0 and 100")
 
-grade = int(grade_text)
+grade = int(user_input)
 
-if grade < 0 or grade > 100:
+if (grade < 0 or grade > 100) :                                  #to compare with number (boolen > <) you must convert the input into integer first
     sys.exit("Error: Grade must be an integer between 0 and 100")
+
 
 if grade < 40:
     result = "Fail"
-elif grade < 70:
+
+elif 70 > grade >= 40:
     result = "Pass"
+
 else:
     result = "Distinction"
 
 print(f"{grade} is a {result}")
+
+
+
+
+
+
