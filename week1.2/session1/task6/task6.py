@@ -19,3 +19,8 @@ print(music_database["taylor swift"])
 #(selftask) add a key-value pair and let the value to be a set
 music_database["Drake"] = ["scream"]
 pprint(music_database)
+
+#(selftask) apply slide36
+print(len(music_database))
+print(max(music_database))
+print(min(music_database))
