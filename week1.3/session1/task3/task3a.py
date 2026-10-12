@@ -3,7 +3,10 @@
 i = 0
 
 while i < 20:
-    i = i + 1
+    i = i + 1            #to avoid getting stuck in ifinite loop
+
+    if not i % 3 == 0:
+        continue
     print(i)
 
 # Add logic using continue so that multiples of 3 are not printed out

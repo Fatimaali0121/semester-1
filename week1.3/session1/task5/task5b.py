@@ -14,4 +14,9 @@ for c, r in rivers.items():
 
 
 # create 2 further for loops to iterate: 1. just through the keys, 2. just through the values
+for keys in rivers:
+    print(keys)   #here it prints the first thing in the dicts
+
+for values in rivers:
+    print(rivers[values])     # while for the values we have to use rivers[values] so it assigns them to values brcause the computer do not understand which one values which one keys 
 # hint: we looked at built in function for dicts last session
