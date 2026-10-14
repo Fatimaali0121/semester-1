@@ -9,8 +9,6 @@ if len(numbers) == 0:
     sys.exit("Error: no numbers provided")
 
 
-print(numbers)
-
 print(f"Minimum = {min(numbers)}")
 print(f"Maximum = {max(numbers)}")
 print(f"Mean = {sum(numbers)/len(numbers)}")
