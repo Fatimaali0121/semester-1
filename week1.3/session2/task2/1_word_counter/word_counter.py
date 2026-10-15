@@ -4,13 +4,18 @@
 # You can use any of the .txt files to test this - or even make your own.
 
 # open and read the file
+with open("story.txt", "r") as infile:
+    text = infile.read()
+    print(text)               #not required
 
 # calculate the number of words
 # hint: you could use .split() to break up by spaces
 # hint: watch out for empty lines that might give you empty strings
+words = text.split()
+word_count = len(words)
 
 # display the wordcount
-
+print(f" Total words: {word_count}")
 # Here are the word counts you should get:
 # story.txt - 290
 # story2.txt - 326
