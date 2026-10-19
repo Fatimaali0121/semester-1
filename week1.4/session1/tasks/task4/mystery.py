@@ -21,6 +21,13 @@ def mystery_func(string):
             lower += 1
     return (upper, lower)
 
+"""
+-the def function defines mystry-func which is a functiuon that represents the num of lowercase letters and num o9f uppercase ones
+-the inpust data accept strings and integers(means if you input an integer it won't cause an error), but for the function to work proparly it is better to input strings because num cannot be in upper or lower case
+- the return value is the num of letters in upper and lower case / the data type is an integer
+
+"""
+
 
 # testing
 
