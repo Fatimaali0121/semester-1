@@ -3,10 +3,12 @@
 sum = 0
 
 for k in range(2,21,2):
-    sum = sum + k ** 2
-    print(sum)  # to print each iteration puth the print in the loop
+    sum = sum + k ** 2       # or sum + k*k
+    print(f"adding {k}^2. Current sum: {sum}")  # to print each iteration put the print inside the loop
 
 
 # modify the code to sum the squares of even numbers up to and including 20
 
 # modify the code to print the sum at each iteration
+
+

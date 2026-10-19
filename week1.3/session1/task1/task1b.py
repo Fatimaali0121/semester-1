@@ -8,6 +8,7 @@ while fruit:
 
 
 # Why does this work?
+
 #same as the second Q answer
 
 
