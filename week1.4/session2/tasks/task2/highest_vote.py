@@ -31,6 +31,25 @@ names = ['Jesy', 'Leigh-Anne', 'Perrie', 'Leigh-Anne', 'Jade',
          'Jade', 'Jesy', 'Perrie', 'Perrie', 'Jade', 'Leigh-Anne',
          'Jesy', 'Jesy', 'Perrie', 'Jesy']
 
+fruits_count = set(fruit)
+for i in fruits_count:
+    print(f"There is {fruit.count(i)} duplicates of {i}")
+    
+duplicates = {}
+names_count = set(names)
+for i in names_count:
+    print(f"There is {names.count(i)} duplicates of {i}")
+    duplicates[i]=names.count(i)
+
+print(duplicates)
+
+
+
+
+
+
+
+
 
 # Check if correct output is produced
 print(most_frequent_string(fruit))          # ('date', 4)
