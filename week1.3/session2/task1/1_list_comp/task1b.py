@@ -14,7 +14,6 @@ for i in values:
 print(newval)
 
 # write the list comprehension equivalent to the `for` loop
-
-# newval = [2 * i for i in values if i % 2 == 0 else i] (it did not work cuz it need a little bity of reorgnizing the structure)
+# newval = [2 * i for i in values if i % 2 == 0 else i] (it did not work cuz it need a little of reorgnizing the structure)
 newval = [2 * i if i % 2 == 0 else i for i in values]  #if you want to keep the odd numbers you need to move the conditional to the beginning of the list comprehension
 print(newval)

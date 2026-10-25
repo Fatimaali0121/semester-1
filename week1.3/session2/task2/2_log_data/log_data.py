@@ -6,6 +6,9 @@
 
 
 # open and read the file
+with open("site.log", "r") as infile:
+    print(infile.read())
+
 
 # find all failed login attempts (POST /login with the response 401)
 # and print these out in a human-readable format:
