@@ -1,7 +1,7 @@
 # Week 1.3, Session 2: Print PGM image info
 
 # Open a pgm image file
-with open("feep.pgm" ,"") as infile:
+
 # You can use the relative path ../images/filename
 # You could handle file errors with try/except.
 
@@ -10,3 +10,13 @@ with open("feep.pgm" ,"") as infile:
 # print image dimension (i.e., Dimensions: width x height pixels)
 
 # print max gray value (i.e., Max Gray Value: max_gray_value)
+try:
+    with open("../images/feep.pgm" ,"r") as infile:
+        infile.read()
+        
+
+
+
+
+except FileNotFoundError:
+    print("Error: The file was not found")
