@@ -22,7 +22,7 @@ def mystery_func(string):
     return (upper, lower)
 
 """
--the def function defines mystry-func which is a functiuon that represents the num of lowercase letters and num o9f uppercase ones
+-the def function defines mystry-func which is a functiuon that represents the num of lowercase letters and num of uppercase ones
 -the inpust data accept strings and integers(means if you input an integer it won't cause an error), but for the function to work proparly it is better to input strings because num cannot be in upper or lower case
 - the return value is the num of letters in upper and lower case / the data type is an integer
 
@@ -41,5 +41,5 @@ print(mystery_func("ABC"))
 # Uncomment the lines of code one by one and run the program
 # to see if you are right?
 
-# print(mystery_func("X"))
-# print(mystery_func("[2, 3]"))
+print(mystery_func("X"))     #output will be (1,0)
+print(mystery_func("[2, 3]"))   #output will be (0,0)
