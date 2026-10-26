@@ -11,4 +11,6 @@ width = float(input("please enter the width of the rectangle"))      #input(user
 hight = float(input("please enter the hight of the rectangle"))      #input(user enters) the hight of the rectangle, to calculate it's area
 
 
-print(f"Area is {rectangle_area(width, hight)}")   # provide suitable data matching your inputs
+print(f"Area = {rectangle_area(width, hight)}")   # provide suitable data matching your inputs
+
+
