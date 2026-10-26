@@ -8,12 +8,14 @@ class Point:
     A point in 2D space.
     """
 
-    def __init__(x_coordinate, y_coordinate):
+    def __init__(self, x_coordinate, y_coordinate):     # self was not included i wrote it to fix the code
         """
         Creates a Point, given x & y coordinates.
         """
-        x = x_coordinate
-        y = y_coordinate
+
+        self.x = x_coordinate    #x = x_coordinate was like this i assigned it to selfso i fix the code
+        self.y = y_coordinate    #y = y_coordinate
+
 
 
 p = Point(1.5, 2.0)

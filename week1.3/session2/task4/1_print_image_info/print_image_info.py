@@ -12,7 +12,12 @@
 # print max gray value (i.e., Max Gray Value: max_gray_value)
 try:
     with open("../images/feep.pgm" ,"r") as infile:
-        infile.read()
+        next(infile)
+        print(infile.read())
+        
+                    
+
+
         
 
 
