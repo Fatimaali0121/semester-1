@@ -40,7 +40,7 @@ def run_program():
 
     match operation:
         case 1:
-            result = addition(num1, num2)    # complete this line of code - None was writen i chnged it and fixed it-
+            result = addition(num1, num2)    # complete this line of code - None was writen i chnged it and fixed it by writing the operation name-
             print(f"The result of addition is: {result}")
         case 2:
             result = subtraction(num1, num2)   # complete this line of code

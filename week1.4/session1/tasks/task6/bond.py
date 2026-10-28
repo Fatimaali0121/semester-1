@@ -16,7 +16,17 @@ def isBond(intList):
     # meaning you need to delete pass to write your code.
     # Nothing happens when pass is executed.
 
-    pass     # delete pass to write your code
+    target = [0, 0, 7]                 # delete pass to write your code
+    target_index = 0
+
+    for num in intList:
+
+        if num == target[target_index]:      # If we just wrote if num == target, the computer would try to check if a single number (like 1 or 0) is equal to the entire list [0, 0, 7], which would always be false. The [target_index] acts like a spotlight, pointing to the exact single digit we need to find next.
+            target_index += 1
+
+        if target_index == len(target):
+            return True
+    return False           # If the loop finishes without finding the sequence, return False
 
 # Check if the following lines of code produce the correct output
 print(isBond([1, 2, 4, 0, 0, 7, 5]))   # True
