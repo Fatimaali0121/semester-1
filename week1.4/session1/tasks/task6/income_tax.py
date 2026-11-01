@@ -33,28 +33,38 @@ def income_tax_calculator(annual_income):
         one decimal point. You can use the round() function,
         e.g round(tax, 1) 0.0 if annual_income is not a positive integer.
     """
-    if not isinstance(annual_income, (int, float)) or annual_income <=0:     # the syntax isinstance checkes if annual_income is an int or folat or if it is a positave int
-        return None
+    if type(annual_income) not in (float, int) or annual_income <=0:     # you can't use douple or on for int one for float because if it's not an a float num it's gonna be an int and the code gonna raise a true, so it will return 0.0
+        return 0.0
 
     no_tax = 12570
+    progressive_tax1 = 50270
+    progressive_tax2 = 125140
 
 
     if annual_income <= 12570:
         return 0
     
     elif annual_income <= 50270:
-        taxable_income = annual_income - no_tax
+        taxable_income = annual_income - no_tax 
         tax = taxable_income * 0.20
         return round(tax, 1)
     
     elif annual_income <= 125140:
-        taxable_income = annual_income - no_tax
-        tax = taxable_income * 40
+        taxable_income1 = annual_income - no_tax
+        tax1 = taxable_income1 * 0.20
+        taxable_income2 = taxable_income1 - progressive_tax1
+        tax2 = taxable_income2 * 0.40
+        tax = tax1 + tax2
         return round(tax,1)
     
     else:
         taxable_income = annual_income - no_tax
-        tax = taxable_income * 45
+        tax1 = taxable_income1 * 0.20
+        taxable_income2 = taxable_income1 - progressive_tax1
+        tax2 = taxable_income2 * 0.40
+        taxable_income3 = taxable_income2 - progressive_tax2
+        tax3 = taxable_income3 * 0.45
+        tax = tax1 + tax2 + tax3
         return round(tax, 1)
 
 
