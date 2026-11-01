@@ -15,6 +15,11 @@ class Money:
         # - the pence parameter is an integer
         # - pence is not negative and not greater than 99
         # Raise appropriate exceptions if any of these are violated
+        if not isinstance(pounds, int) or pounds < 0 and not (pence, int) or 99 < pence < 0:
+            raise ValueError ("Please make sure that the value of pound is a positive integer")
+        if not (pence, int) or 99 < pence < 0:
+            raise ValueError ("Please make sure that the value of pence is a positive integer and less than 99")
+
 
         self.pounds = pounds
         self.pence = pence
