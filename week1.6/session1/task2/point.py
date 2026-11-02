@@ -41,3 +41,9 @@ class Point:
             return False
 
         return self.x == other.x and self.y == other.y
+
+from point import Point 
+p = (1, 2)
+q = (1, 2)
+# when you test them using the python interpreter it tests if they are the same objects, it does not test their values.
+# So, by using __eql__ we're solving this issue.
