@@ -1,9 +1,10 @@
 # code examples on slide 5
 for item in range(5):
-    print(item, end=":")
-
+    print(item, end=":")    
+    
 print("hello", "world", "there", sep='@')
 
+# both print commands apeares in the same line because end=":" force them to be in the same line
 
 # code example on slide 6
 def greet(name, greeting="Hello", punctuation="!"):
