@@ -16,14 +16,31 @@
 
 def circle_area(radius, pi_value=3.14):  # assign a default value to pi_value
     # complete the code here
+    area = pi_value * radius * radius
+    return area
 
-    return f"area = {radius*radius*pi_value}"
+   #OR: return f"area = {radius*radius*pi_value}"
 
 # Check if correct output is produced
 print(circle_area(2))
 print(circle_area(5))
 print(circle_area(22.5))
+print(circle_area(2, 3.142))
 
 # For those knowing how to import a module, you could import the math module
 # and then use math.pi as the default value for pi_value.
 
+import math 
+
+def circle_area(radius, pi=math.pi):  
+    # complete the code here
+    area = pi * radius * radius
+    return area
+
+   #OR: return f"area = {radius*radius*pi}"
+
+# Check if correct output is produced
+print(circle_area(2))
+print(circle_area(5))
+print(circle_area(22.5))
+print(circle_area(2, 3.142))

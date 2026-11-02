@@ -8,5 +8,9 @@ def greeting(name='John'):
 # Check if correct output is produced
 greeting(name="Fatima")
 
+
 # write a second test by passing a name to the function
 greeting(name="Noor")
+
+greeting("Fatima")       # both ways work
+greeting()               # if there is no argumant it returns default value
