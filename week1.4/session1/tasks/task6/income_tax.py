@@ -35,42 +35,35 @@ def income_tax_calculator(annual_income):
     """
     if type(annual_income) not in (float, int) or annual_income <=0:     # you can't use douple or on for int one for float because if it's not an a float num it's gonna be an int and the code gonna raise a true, so it will return 0.0
         return 0.0
-
-    no_tax = 12570
-    progressive_tax1 = 50270
-    progressive_tax2 = 125140
-
-
-    if annual_income <= 12570:
-        return 0
     
-    elif annual_income <= 50270:
-        taxable_income = annual_income - no_tax 
-        tax = taxable_income * 0.20
-        return round(tax, 1)
+    if annual_income < 12570:
+        return 0.0
+
+    tax = 0
+
+# we used new if loops not if and elsif, because we want to calculate prograssive tax so we want the remiaing annual income to go through the rest of the if loops to calculate prograssive tax
+# if it was not a prograssive tax we should've used if else, because in using if elsif the computer stop checking asa it finds one true condition. and we don't want that we want the same income go through all if loops to calc prograssive tax
     
-    elif annual_income <= 125140:
-        taxable_income1 = annual_income - no_tax
-        tax1 = taxable_income1 * 0.20
-        taxable_income2 = taxable_income1 - progressive_tax1
-        tax2 = taxable_income2 * 0.40
-        tax = tax1 + tax2
-        return round(tax,1)
+    if annual_income > 125140:               
+        tax += (annual_income - 125140) * 0.45
+        annual_income = 125140              # remaining annual_income after calculating first patrt of prograssive tax, so we can apply rest of prograssive tax on it
+                                          
+    if annual_income > 50270:
+        tax += (annual_income - 50270) * 0.40
+        annual_income = 50270
+
+    if annual_income > 12570:
+        tax += (annual_income - 12570) * 0.20
+        # no need to give remaining annual income a variable, as if it's less than 12570, it's tax free
+
+    return round(tax, 1)
+
     
-    else:
-        taxable_income = annual_income - no_tax
-        tax1 = taxable_income1 * 0.20
-        taxable_income2 = taxable_income1 - progressive_tax1
-        tax2 = taxable_income2 * 0.40
-        taxable_income3 = taxable_income2 - progressive_tax2
-        tax3 = taxable_income3 * 0.45
-        tax = tax1 + tax2 + tax3
-        return round(tax, 1)
-
-
-
+    
 # Check if the following lines produce the correct output
 print(income_tax_calculator(12000))     # 0.0
 print(income_tax_calculator(14000))     # 286.0
 print(income_tax_calculator(25000))     # 2486.0
 print(income_tax_calculator(100000))    # 27432.0
+print(income_tax_calculator(200000))
+print(income_tax_calculator(-10000))
