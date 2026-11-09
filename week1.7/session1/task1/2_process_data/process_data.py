@@ -14,5 +14,5 @@ def process_data(data):
     """
     if not data:
         return None
-
+    
     return sum(data)

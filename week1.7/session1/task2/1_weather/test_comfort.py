@@ -8,10 +8,20 @@
 from weather import comfort_level
 
 def test_cold():
-    assert comfort_level(    ) == "COLD"
-    assert comfort_level(    ) == "COLD"
+    assert comfort_level(10) == "COLD"
+    assert comfort_level(15) == "COLD"
 
 def test_hot():
-    assert comfort_level(    ) == "HOT"
-    assert comfort_level(    ) == "HOT"
-    
+    assert comfort_level(30) == "HOT"
+    assert comfort_level(50) == "HOT"
+
+def test_ok():
+    assert comfort_level(25) == "OK"
+    assert comfort_level(16) == "OK"
+
+# to test using first method (task 2)
+test_cold()               
+test_hot()
+test_cold()
+
+# for the second method using task3 (pytest), use the terminal.
