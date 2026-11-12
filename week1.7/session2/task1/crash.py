@@ -4,9 +4,9 @@
 
 def assign_values(x):
     for i in range(100):
-        x[i] = (i + 1) * (i + 1);
+        x[i] = (i + 1) * (i + 1)           # it was like this and I've corrected by removing the ";" x[i] = (i + 1) * (i + 1);
 
 if __name__ == "__main__":
-    data = [0] * 10
+    data = [0] * 100                       # it was like this data = [0] * 10, i have corrected by making index samw as the range make it 100
     assign_values(data)
     print("Done!")

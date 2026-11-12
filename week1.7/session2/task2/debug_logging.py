@@ -7,7 +7,7 @@ def calculate_average(scores):
     logging.basicConfig(filename='log.txt', filemode='w', level=logging.DEBUG)
     
     # you can turn the logging off
-    # logging.disable(logging.CRITICAL)
+    #logging.disable(logging.CRITICAL)             for disabling all logger.debugging
     
     logger = logging.getLogger()
     logger.info(f"calculate_average(): started")
@@ -17,11 +17,14 @@ def calculate_average(scores):
     
     # add debug logging here
     
-    average = total_score // total_assignments
-    
+    average = total_score / total_assignments
+    logger.debug(f"average = {average}")                            #checkes the average
+
     # add a debug logging here
     
+    logger.debug(f"return will be {round(average,2)}")
     return round(average,2)
+
 
 print(calculate_average([85, 90, 88]))
 # Expected Output: 87.67
