@@ -18,9 +18,50 @@
 #  Print `Invalid pixel values` if any pixel values is less than 0 and greater than the maximum gray value
 
 try:
-    with open("../images/pluse.pgm", "r") as infile:
+    with open("../images/invalid_pixels.pgm" ,"r") as infile:
+        data = infile.readlines()
+
         
+    data=[line.strip().split() for line in data[1:]]   
+   
 
-
-except FileNotFoundError: 
+except FileNotFoundError:
     print("Error: The file was not found")
+
+width = int(data[0][0])
+height = int(data[0][1])
+max_gray_val = int(data[1][0])
+
+
+print(f" width = {width}")
+print(f" height = {height}")
+print(f" max gray value = {max_gray_val}")
+
+pixel = [[int(item) for item in lines] for lines in data[2:]]
+
+exact_width=len(pixel[0])
+
+if width != exact_width:
+    print("invalidate width")
+
+exact_height = len(pixel)
+
+if height != exact_height:
+    print("invalidate height")
+
+# validate_pixel_value=[[0<= item <=max_gray_val for item in lines] for lines in pixel]
+
+
+valid_pixel = True
+
+for lines in pixel:
+    for item in lines:
+        #print(item)
+        if (item > max_gray_val) or (item < 0):
+            valid_pixel = False 
+
+
+#print(valid_pixel)
+
+if not valid_pixel:
+    print("invalid pixel grey")
