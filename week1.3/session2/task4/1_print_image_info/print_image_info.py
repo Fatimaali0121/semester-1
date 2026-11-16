@@ -12,9 +12,23 @@
 # print max gray value (i.e., Max Gray Value: max_gray_value)
 try:
     with open("../images/feep.pgm" ,"r") as infile:
-        #read magic number, e.g. P2
-        magic_number = infile.readline().strip()       # readline() returnes P2\n and the strip() cleans it up by removing \n
-
+        data = infile.readlines()
+        
+        
+       
+    data=[line.strip().split() for line in data[1:]]   
+    print(data)
 
 except FileNotFoundError:
     print("Error: The file was not found")
+
+width = int(data[0][0])
+height = int(data[0][1])
+max_gray_val = int(data[1][0])
+
+
+print(f" width = {width}")
+print(f" height = {height}")
+print(f" max gray value = {max_gray_val}")
+
+
