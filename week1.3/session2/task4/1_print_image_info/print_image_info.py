@@ -17,20 +17,17 @@ try:
         image = [line.strip().split() for line in image]
         #print(image)
 
-    width = int(image[0][0])
-    height = int(image[0][1])
-    max_gray_val = image[1][0]
-
-    image_dimention = width * height
-    print(f"Dimention: {image_dimention}")
-
-    print(f"Max gray value: {max_gray_val}")
-
-
 except FileNotFoundError:
     print("Error: File was not found")
 
+width = int(image[0][0])
+height = int(image[0][1])
+max_gray_val = image[1][0]
 
+image_dimention = width * height
+print(f"Dimention: {image_dimention}")
+
+print(f"Max gray value: {max_gray_val}")
 
 
 
