@@ -10,3 +10,4 @@ if __name__ == "__main__":
     data = [0] * 100                       # it was like this data = [0] * 10, i have corrected by making index samw as the range make it 100
     assign_values(data)
     print("Done!")
+
